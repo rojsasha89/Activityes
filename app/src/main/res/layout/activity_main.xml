@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00B8D4"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgUser"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_man"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundImage" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/user_name"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgUser" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/white"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userName">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/white_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_white"
+        android:elevation="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toTopOf="@id/white"
+        app:layout_constraintTop_toTopOf="@id/white">
+
+        <TextView
+            android:id="@+id/photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/new_font"
+            android:text="160"
+            android:textColor="#00B8D4"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/photos"
+            app:layout_constraintStart_toStartOf="@id/photos"
+            app:layout_constraintTop_toBottomOf="@id/photos" />
+
+        <TextView
+            android:id="@+id/photos1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/new_font"
+            android:text="160"
+            android:textColor="#00B8D4"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/photos1"
+            app:layout_constraintStart_toStartOf="@id/photos1"
+            app:layout_constraintTop_toBottomOf="@id/photos1" />
+
+        <TextView
+            android:id="@+id/photos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photos"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/new_font"
+            android:text="160"
+            android:textColor="#00B8D4"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/photos2"
+            app:layout_constraintStart_toStartOf="@id/photos2"
+            app:layout_constraintTop_toBottomOf="@id/photos2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:hint="input text"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/white_round"
+        app:layout_constraintTop_toBottomOf="@id/white_round" />
+
+
+
+    <EditText
+        android:id="@+id/email1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:hint="input text"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/white_round"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
+    <Button
+        android:id="@+id/btnHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hide user"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
